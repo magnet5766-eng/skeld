@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VoidPacks — Free Game Repacks</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Star canvas background -->
+  <canvas id="starfield"></canvas>
+
+  <!-- Nav -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <span class="brand-icon">⬡</span>
+      <div>
+        <span class="brand-name">VoidPacks</span>
+        <span class="brand-sub">Free Game Repacks</span>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#" class="nav-link active">Home</a>
+      <a href="#games" class="nav-link">Games</a>
+      <a href="#providers" class="nav-link">Providers</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+    </div>
+    <div class="nav-right">
+      <div class="search-wrap">
+        <input type="text" id="searchInput" class="search-input" placeholder="Search games..." />
+        <span class="search-icon">⌕</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Games.<br /><span class="accent">Repacked.</span><br />Ready.</h1>
+      <p class="hero-sub">Browse the latest free game repacks from top providers — all in one place.</p>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num" id="statGames">—</span><span class="stat-label">Games</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">4</span><span class="stat-label">Providers</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">∞</span><span class="stat-label">Free</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trending -->
+  <section class="section" id="trending">
+    <div class="section-header">
+      <h2 class="section-title">Trending <span class="accent">Now</span></h2>
+      <span class="section-tag">Latest Releases</span>
+    </div>
+    <div class="trending-grid" id="trendingGrid">
+      <div class="skeleton-card"></div>
+      <div class="skeleton-card"></div>
+      <div class="skeleton-card"></div>
+      <div class="skeleton-card"></div>
+    </div>
+  </section>
+
+  <!-- Provider Filter -->
+  <section class="section" id="games">
+    <div class="section-header">
+      <h2 class="section-title">All <span class="accent">Games</span></h2>
+      <div class="filter-bar">
+        <button class="filter-btn active" data-provider="all">All</button>
+        <button class="filter-btn" data-provider="fitgirl">FitGirl</button>
+        <button class="filter-btn" data-provider="steamrip">SteamRIP</button>
+        <button class="filter-btn" data-provider="ankergames">AnkerGames</button>
+        <button class="filter-btn" data-provider="astralgames">AstralGames</button>
+      </div>
+    </div>
+    <div class="games-grid" id="gamesGrid">
+      <div class="skeleton-card"></div>
+      <div class="skeleton-card"></div>
+      <div class="skeleton-card"></div>
+      <div class="skeleton-card"></div>
+      <div class="skeleton-card"></div>
+      <div class="skeleton-card"></div>
+      <div class="skeleton-card"></div>
+      <div class="skeleton-card"></div>
+    </div>
+    <div class="load-more-wrap">
+      <button class="load-more-btn" id="loadMoreBtn">Load More</button>
+    </div>
+  </section>
+
+  <!-- Providers -->
+  <section class="section" id="providers">
+    <div class="section-header">
+      <h2 class="section-title">Repack <span class="accent">Providers</span></h2>
+    </div>
+    <div class="providers-grid">
+      <a href="https://fitgirl-repacks.site" target="_blank" class="provider-card">
+        <div class="provider-badge live">● Live Feed</div>
+        <div class="provider-name">FitGirl Repacks</div>
+        <div class="provider-desc">The most well-known repacker. Highly compressed installers with excellent compatibility.</div>
+        <div class="provider-arrow">→</div>
+      </a>
+      <a href="https://steamrip.com" target="_blank" class="provider-card">
+        <div class="provider-badge ext">External</div>
+        <div class="provider-name">SteamRIP</div>
+        <div class="provider-desc">Pre-installed games ready to run. No installation needed. Password: steamrip.com</div>
+        <div class="provider-arrow">→</div>
+      </a>
+      <a href="https://ankergames.net" target="_blank" class="provider-card">
+        <div class="provider-badge ext">External</div>
+        <div class="provider-name">AnkerGames</div>
+        <div class="provider-desc">Direct links, portable games. No file hosting middlemen.</div>
+        <div class="provider-arrow">→</div>
+      </a>
+      <a href="https://astral-games.net" target="_blank" class="provider-card">
+        <div class="provider-badge ext">External</div>
+        <div class="provider-name">AstralGames</div>
+        <div class="provider-desc">Pre-installed games with achievement support and active Discord community.</div>
+        <div class="provider-arrow">→</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="section-header">
+      <h2 class="section-title">FAQ</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">What are repacks?</button>
+        <div class="faq-a">Repacks are compressed versions of games that reduce download size significantly. They repackage the original game files into a custom installer that decompresses on your PC during installation.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Are these safe to download?</button>
+        <div class="faq-a">Always download from the official provider sites linked here. VoidPacks does not host any files — we aggregate links to trusted repack providers only. Always scan with an antivirus and read comments on provider sites.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Why is FitGirl's content live but others aren't?</button>
+        <div class="faq-a">FitGirl's site exposes a public WordPress JSON API that we can read from your browser. Other providers don't offer a public API, so we link to their sites directly instead.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How often is this updated?</button>
+        <div class="faq-a">FitGirl's feed is fetched live every time you visit. Games appear here as soon as they're posted on the provider's site.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-brand">⬡ VoidPacks</div>
+    <p class="footer-note">VoidPacks does not host any game files. All content is fetched from third-party providers. This site is for informational purposes only.</p>
+    <div class="footer-links">
+      <a href="https://fitgirl-repacks.site" target="_blank">FitGirl</a>
+      <a href="https://steamrip.com" target="_blank">SteamRIP</a>
+      <a href="https://ankergames.net" target="_blank">AnkerGames</a>
+      <a href="https://astral-games.net" target="_blank">AstralGames</a>
+    </div>
+  </footer>
+
+  <!-- Game Modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="gameModal">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="modal-inner" id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
